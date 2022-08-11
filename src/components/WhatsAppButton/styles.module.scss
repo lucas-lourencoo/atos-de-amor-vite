@@ -1,0 +1,26 @@
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+#whatsapp {
+  position: fixed;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  color: #fff;
+  border: 1px solid #fff;
+  z-index: 2;
+  background: #5db4a7;
+  padding: 9px;
+  border-radius: 30px;
+  font-size: 27px;
+  animation-fill-mode: forwards;
+  animation: grow 1.5s infinite alternate;
+}

@@ -1,0 +1,44 @@
+.bannerContainerButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 50rem;
+
+  * {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gray);
+    text-align: center;
+    padding: 20px 30px;
+    border: 0;
+    border-radius: 100px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    margin-top: 3.2rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  a {
+    border: 2px solid #0f2866;
+  }
+
+  button {
+    color: #fff;
+    background: linear-gradient(-131deg, #0f2866 0%, #007bff 100%);
+  }
+}
+
+@media (max-width: 76rem) {
+  .bannerContainerButtons {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+}

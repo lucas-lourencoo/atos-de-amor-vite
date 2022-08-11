@@ -1,0 +1,87 @@
+.projectEspecifysContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  color: var(--gray);
+  background-image: url("/clarobg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+}
+
+.projectEspecifysImage {
+  border: 18px solid #2d04bf;
+  margin-right: 10rem;
+  max-width: 40rem;
+}
+
+.projectEspecifysImage img {
+  transform: translate3d(4rem, 3rem, 0);
+}
+
+.projectEspecifysText h2 {
+  color: var(--black);
+  font-size: 4.6rem;
+  font-weight: 800;
+  max-width: 45rem;
+  margin-bottom: 3.5rem;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0.8rem;
+}
+
+.projectEspecifysText h2::before {
+  content: "";
+  height: 0.7rem;
+  width: 6rem;
+  position: absolute;
+  bottom: -0.5rem;
+  background-color: #2d05bf;
+}
+
+.projectEspecifysText p {
+  font-size: 1.4rem;
+  max-width: 54rem;
+  line-height: 2;
+  font-weight: 400;
+  color: rgb(95, 95, 95);
+  margin-bottom: 2rem;
+}
+
+.projectEspecifysText a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  padding: 20px 30px;
+  border: 0;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(-131deg, #0f2866 0%, #007bff 100%);
+  display: inline-block;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.projectEspecifysText a:hover {
+  transform: translateY(-0.2rem);
+}
+
+@media (max-width: 768px) {
+  .projectEspecifysContainer {
+    flex-direction: column;
+  }
+  .projectEspecifysImage {
+    margin: initial;
+  }
+  .projectEspecifysText h2 {
+    font-size: 4rem;
+    margin-top: 2.4rem;
+  }
+}

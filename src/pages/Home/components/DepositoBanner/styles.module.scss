@@ -1,0 +1,61 @@
+.depositoBannerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 6rem;
+}
+
+.bannerContainerButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 50rem;
+}
+
+.bannerContainerButtons * {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gray);
+  text-align: center;
+  padding: 20px 30px;
+  border: 0;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  margin-top: 5rem;
+  cursor: pointer;
+}
+
+.bannerContainerButtons a {
+  border: 2px solid #0f2866;
+}
+
+.bannerContainerButtons button {
+  color: #fff;
+  background: linear-gradient(-131deg, #0f2866 0%, #007bff 100%);
+}
+
+.bannerContainerButtons *:hover {
+  transform: translateY(-0.2rem);
+}
+
+@media (max-width: 768px) {
+  .depositoBannerContainer a {
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+  }
+  .depositoBannerContainer img {
+    margin-top: 2rem;
+    display: none;
+  }
+  .bannerContainerButtons {
+    flex-direction: column;
+  }
+}

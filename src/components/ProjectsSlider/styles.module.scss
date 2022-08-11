@@ -1,0 +1,30 @@
+.projectEspecifysCarousel {
+  max-width: 75%;
+  padding: 0 0 6rem;
+  margin: 0 auto;
+}
+
+.projectEspecifysCarouselItem {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    transition: 0.3s;
+    max-height: 12rem;
+  }
+
+  &:hover img {
+    filter: grayscale(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .projectEspecifysCarousel {
+    max-width: 90%;
+    padding: 0 0 4rem;
+  }
+  .projectEspecifysCarouselItem img {
+    max-height: 10rem;
+  }
+}

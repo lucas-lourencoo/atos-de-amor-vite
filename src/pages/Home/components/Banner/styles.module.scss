@@ -1,0 +1,168 @@
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes left-right {
+  from {
+    transform: translateX(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-left {
+  from {
+    transform: translateX(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes upDown {
+  from {
+    transform: translateY(-1rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.arrowDown {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 50%;
+  right: 50%;
+  z-index: 20;
+  animation: upDown 1s alternate infinite;
+  z-index: 1;
+}
+
+.banner video {
+  filter: brightness(80%);
+  width: 100%;
+  position: absolute;
+}
+
+.banner img {
+  filter: invert(100%) brightness(200%);
+  opacity: 0.25;
+  width: 70rem;
+}
+
+.banner .centerText {
+  position: absolute;
+  margin: 0 auto;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--white);
+  opacity: 0;
+  animation: left-right 1.6s 1s ease forwards;
+}
+
+.banner .centerText .text {
+  transform: translateX(-6.2rem);
+  max-width: 35%;
+}
+
+.banner .centerText .text strong {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-top: 1.6rem;
+  font-weight: 600;
+  display: block;
+  opacity: 0;
+  animation: right-left 1.4s 2s ease forwards;
+}
+
+.banner .centerText .text h1 {
+  font-size: 7.2rem;
+  line-height: 1.2;
+  display: block;
+  opacity: 0;
+  animation: right-left 1.4s 1.5s ease forwards;
+}
+
+.banner .centerText .text > h1 {
+  line-height: 1.1;
+}
+
+.banner .centerText .text a {
+  font-size: 1.4rem;
+  margin-top: 1.6rem;
+  display: inline-block;
+  color: var(--white);
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 300;
+  opacity: 0;
+  animation: right-left 1.4s 2.4s ease forwards;
+}
+
+.banner .centerText .text a::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  left: 110%;
+  top: 50%;
+  background: var(--white);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .banner .centerText {
+    top: 0;
+    flex-direction: column;
+  }
+  .banner .centerText .text h1 {
+    font-size: 5rem;
+  }
+  .banner .centerText .text {
+    width: 90%;
+  }
+  .banner .centerText .text h1,
+  .banner .centerText .text a,
+  .banner .centerText .text strong {
+    transform: translateX(0);
+  }
+  .banner .centerText .text strong {
+    font-size: 1.6rem;
+  }
+  .banner .centerText .text {
+    transform: translateX(0);
+    max-width: 90%;
+  }
+  .banner .centerText img {
+    max-width: 90%;
+  }
+  .banner video {
+    filter: brightness(80%);
+    height: 100%;
+    width: initial;
+  }
+  .arrowDown {
+    left: 45%;
+  }
+}

@@ -1,0 +1,101 @@
+.contactContainer {
+  width: 100%;
+  height: 60rem;
+  position: relative;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: brightness(80%);
+  }
+}
+
+.contactModal {
+  position: absolute;
+  top: 2rem;
+  left: 12rem;
+  background: #fff;
+  height: 57rem;
+  border-radius: 5px;
+  padding: 4rem;
+  width: 50rem;
+
+  ul {
+    list-style: none;
+
+    li {
+      color: #8f8383;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: 1fr 6fr;
+    }
+  }
+
+  h3 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    color: #252525;
+    font-size: 46px;
+    line-height: 46px;
+    line-height: 56px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+    color: rgb(37, 37, 37);
+    margin-bottom: 2.5rem;
+  }
+
+  svg {
+    align-self: flex-start;
+    justify-self: flex-start;
+    color: #2b68bc;
+    margin-top: 0.5rem;
+    stroke-width: 0.8;
+  }
+}
+
+.contactModalAdress {
+  align-self: center;
+  justify-self: flex-start;
+
+  h4 {
+    color: #252525;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactModal {
+    width: 30rem;
+    left: 2rem;
+    padding: 2rem;
+    height: 46rem;
+    top: 7rem;
+  }
+  .contactModal h3 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+  }
+  .contactModal .contactModalAdress p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .contactModal p {
+    margin-bottom: 1.5rem;
+  }
+  .contactModal ul li {
+    gap: 1rem;
+  }
+}
