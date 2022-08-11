@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { FaDollarSign, FaHourglassHalf, FaSearch } from "react-icons/fa";
-import styles from "../styles/components/WantTo.module.css";
+import { Link } from "react-router-dom";
+import styles from "./styles.module.scss";
 
 export default function WantTo() {
   return (
@@ -26,9 +26,7 @@ export default function WantTo() {
           muito bem vinda, seja mensal fixa ou exporádica, clique abaixo e veja
           como ajudar.
         </p>
-        <Link href="/ajude/estendaamao">
-          <a>Saiba mais</a>
-        </Link>
+        <Link to="/ajude/estendaamao">Saiba mais</Link>
       </div>
       <div className={styles.wantToItem}>
         <div className={styles.circle}>
@@ -40,9 +38,7 @@ export default function WantTo() {
           ser reverditos para uma das nossas frentes de atuação, basta clicar no
           botão a seguir.
         </p>
-        <Link href="/ajude/estendaamao">
-          <a>Saiba mais</a>
-        </Link>
+        <Link to="/ajude/estendaamao">Saiba mais</Link>
       </div>
     </section>
   );

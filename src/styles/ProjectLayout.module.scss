@@ -1,0 +1,385 @@
+.aboutText {
+  padding: 2rem 18.5rem;
+  font-size: 1.6rem;
+  color: rgb(33, 37, 41);
+  line-height: 1.5;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.breadcrumb p {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #8f8d8d;
+}
+
+.breadcrumb p span {
+  margin: 0 0.8rem;
+  color: #525252;
+}
+
+.breadcrumb p svg {
+  margin-right: 0.8rem;
+  color: #333333;
+  stroke-width: 1;
+}
+
+.title {
+  font-size: 4.6rem;
+  color: var(--black);
+  margin-bottom: 4rem;
+}
+
+.aboutProject,
+.helpProject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2.4rem;
+
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    justify-self: center;
+    max-width: 25%;
+
+    img + img{
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+.helpProject {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0;
+
+  article p {
+    margin-bottom: 1.6rem;
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+
+  h2:before {
+    content: "";
+    height: 0.5rem;
+    width: 6rem;
+    position: absolute;
+    bottom: -0.5rem;
+    background-color: #2d05bf;
+  }
+
+  a {
+    margin: 2.4rem 0;
+    background: #0e3a70;
+    padding: 1.6rem 2.4rem;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 2.4rem;
+    display: inline-block;
+    transition: .2s;
+
+    &:hover{
+      filter: brightness(120%);
+    }
+  }
+}
+
+.aboutProject h2,
+.helpProject h2 {
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.aboutProject h2::before {
+  content: "";
+  height: 0.5rem;
+  width: 6rem;
+  position: absolute;
+  bottom: -0.5rem;
+  background-color: #2d05bf;
+}
+
+.aboutProject {
+  article {
+    max-width: 60%;
+
+    p {
+      margin-bottom: 3.2rem;
+      line-height: 1.6;
+      font-size: 2rem;
+    }
+  }
+
+  span {
+    font-size: 2.4rem;
+    line-height: 2;
+  }
+
+  cite {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+
+
+.transparenciaDesempenhoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 4.8rem auto;
+  width: 60%;
+  gap: 4.8rem;
+}
+
+.transparenciaDesempenhoGridItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.transparenciaDesempenhoGridItem p {
+  font-size: 3.6rem;
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.transparenciaDesempenhoGridItem p + p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.transparenciaDesempenhoGridItem span {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.reality .title {
+  color: rgb(245, 245, 245);
+}
+
+.reality {
+  background-image: linear-gradient(135deg, #b30e11 0%, #ff9800 135%);
+  text-align: center;
+  padding: 4rem;
+  flex-direction: column;
+}
+
+.realityGridItem {
+  max-height: 24rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reality img {
+  max-width: 90%;
+  max-height: 28rem;
+  margin: 0 auto;
+}
+
+.projectAbout {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 4rem;
+  padding: 4rem 10rem 0;
+}
+
+.projectAbout h4 {
+  font-size: 4rem;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  margin: 4rem 0;
+  background: rgb(241, 241, 241);
+
+  .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 4rem 0;
+
+    @media(max-width: 728px){
+      width: 90%;
+    }
+  }
+}
+
+.video::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../../../public/swirl_pattern.png") fixed;
+  background-size: 35rem;
+  background-position: center;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.video h2 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 4.8rem;
+  font-size: 3.6rem;
+  color: #252525;
+  line-height: 1.1;
+  text-align: center;
+  
+  @media(max-width: 728px){
+      font-size: 3.2rem !important;
+    }
+}
+
+.video iframe {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.projectAboutVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.projectAboutVideo img {
+  max-width: 50rem;
+}
+
+.projectAboutVideo iframe {
+  margin-bottom: 3rem;
+}
+
+.projectAboutForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 9rem 0;
+  background: rgb(243, 243, 243);
+}
+
+.projects h2 {
+  margin-bottom: 4rem;
+}
+
+.projects p {
+  font-size: 1.6rem;
+  margin-bottom: 8rem;
+  font-weight: 700;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .video h2 {
+    text-align: center;
+    display: inline-block;
+    font-size: 4rem;
+  }
+  .title {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  .aboutProject article {
+    max-width: 90%;
+  }
+  .aboutProject article p {
+    font-size: 1.8rem;
+  }
+  .transparenciaDesempenhoGrid {
+    grid-template-columns: none;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+  }
+  .projectAbout {
+    grid-template-columns: none;
+    width: 100%;
+    position: relative;
+    padding: 4rem;
+  }
+  .projectAboutVideo iframe {
+    width: 100%;
+  }
+  .realityGrid {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .reality {
+    padding: 1.6rem;
+  }
+  .reality h2 {
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+  }
+  .projects {
+    padding: 4rem;
+    text-align: center;
+  }
+  .projects h2 {
+    font-size: 4rem;
+  }
+  .aboutProject span {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}

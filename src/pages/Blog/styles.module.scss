@@ -1,0 +1,247 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 20fr 80fr;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+
+  ul {
+    list-style: none;
+    border-right: 4px solid var(--gray);
+    padding-right: 2.4rem;
+
+    li {
+      padding: 1.2rem 0;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+
+      button {
+        cursor: pointer;
+        font-size: 1.6rem;
+        color: var(--gray);
+      }
+
+      svg {
+        position: absolute;
+        right: -2rem;
+        display: none;
+      }
+
+      button.active {
+        color: #163a70;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.filter ul li button.active,
+.filter ul li button.active + svg {
+  font-weight: 600;
+  display: flex;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+  width: 100%;
+  height: 100%;
+
+  .card {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+
+    .content {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 1.6rem;
+      color: var(--gray);
+    }
+
+    .button {
+      font-size: 1.6rem;
+      padding: 0.4rem 1.2rem;
+      display: inline-block;
+      background: #1d2124;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: 600;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      justify-self: flex-end;
+    }
+
+    .time {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      color: #0e3a70;
+      margin: 1.2rem 0;
+
+      svg {
+        margin-right: 0.4rem;
+      }
+    }
+
+    h3 {
+      margin-bottom: 0.8rem;
+      font-size: 2.2rem;
+      color: #0e3a70;
+      font-weight: 700;
+    }
+  }
+}
+
+.containerzin {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+
+  article {
+    width: 50%;
+    margin: 0 auto;
+
+    h1 {
+      color: #0e3a70;
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      margin-bottom: 1.6rem;
+      line-height: 1.5;
+      font-size: 1.8rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+      font-size: 1.8rem;
+    }
+
+    img {
+      margin-bottom: 4rem;
+      width: 100%;
+    }
+  }
+}
+
+.containerzin article .time,
+.containerzin article .author {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  color: #0e3a70;
+}
+
+.containerzin article .time {
+  margin: 2.4rem 0;
+}
+
+.containerzin article .author {
+  margin-bottom: 4rem;
+}
+
+.containerzin article .time svg,
+.containerzin article .author svg {
+  margin-right: 0.8rem;
+}
+
+.materias {
+  width: 70%;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #0e3a70;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.6rem;
+  }
+}
+
+.materiasGrid {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2.4rem;
+
+  .card {
+    h3 {
+      margin-top: 0.8rem;
+      font-size: 1.8rem;
+      color: var(--black);
+    }
+
+    p {
+      margin: 0.8rem 0;
+      line-height: 1.4;
+      font-size: 1.4rem;
+    }
+
+    a {
+      font-size: 1.4rem;
+      padding: 0.4rem 1.2rem;
+      display: inline-block;
+      background: #1d2124;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: 600;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    img {
+      max-height: 21rem;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .cardsGrid {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+  .container {
+    grid-template-columns: 10fr 90fr;
+    gap: 2.4rem;
+  }
+
+  .filter ul li button {
+    font-size: 1.4rem;
+  }
+  .materias {
+    width: 90%;
+  }
+  .containerzin article {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .containerzin article h1 {
+    font-size: 3rem;
+  }
+}

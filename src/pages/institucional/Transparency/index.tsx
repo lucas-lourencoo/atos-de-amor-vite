@@ -9,9 +9,9 @@ import {
 import { FiHome } from "react-icons/fi";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import BannerImage from "../../components/BannerImage";
+import BannerImage from "../../../components/BannerImage";
 import { Link } from "react-router-dom";
-import ProjectsSlider from "../../components/ProjectsSlider";
+import ProjectsSlider from "../../../components/ProjectsSlider";
 import styles from "./styles.module.scss";
 
 export function Transparency() {

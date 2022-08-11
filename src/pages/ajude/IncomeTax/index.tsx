@@ -1,8 +1,8 @@
 import { FiHome } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import BannerImage from "../../components/BannerImage";
+import BannerImage from "../../../components/BannerImage";
 
-import PassFor from "../../components/PassFor";
+import PassFor from "../../../components/PassFor";
 import styles from "./styles.module.scss";
 
 export function IncomeTax() {

@@ -1,0 +1,20 @@
+.reality {
+  text-align: center;
+  padding: 4rem;
+  flex-direction: column;
+}
+
+.reality img {
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .realityGrid {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+  .reality h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+}

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BannerImage from "../../components/BannerImage";
+import BannerImage from "../../../components/BannerImage";
 import {
   FiBarChart,
   FiCoffee,
@@ -9,7 +9,7 @@ import {
   FiSend,
   FiUsers,
 } from "react-icons/fi";
-import ProjectsSlider from "../../components/ProjectsSlider";
+import ProjectsSlider from "../../../components/ProjectsSlider";
 import styles from "./styles.module.scss";
 
 export function About() {

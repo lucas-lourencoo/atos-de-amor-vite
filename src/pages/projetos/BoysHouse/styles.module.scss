@@ -1,0 +1,407 @@
+.aboutText {
+  padding: 2rem 18.5rem;
+  font-size: 1.6rem;
+  color: rgb(33, 37, 41);
+  line-height: 1.5;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.breadcrumb p {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #8f8d8d;
+}
+
+.breadcrumb p span {
+  margin: 0 0.8rem;
+  color: #525252;
+}
+
+.breadcrumb p svg {
+  margin-right: 0.8rem;
+  color: #333333;
+  stroke-width: 1;
+}
+
+.title {
+  font-size: 4.6rem;
+  color: var(--black);
+  margin-bottom: 7rem;
+}
+
+.aboutProject,
+.helpProject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1120px;
+  gap: 2.4rem;
+
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    justify-self: center;
+    max-width: 25%;
+
+    img + img {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+.helpProject {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0;
+
+  article p {
+    margin-bottom: 1.6rem;
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+
+  h2:before {
+    content: "";
+    height: 0.5rem;
+    width: 6rem;
+    position: absolute;
+    bottom: -0.5rem;
+    background-color: #2d05bf;
+  }
+
+  a {
+    margin: 2.4rem 0;
+    background: #0e3a70;
+    padding: 1.6rem 2.4rem;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 2.4rem;
+    display: inline-block;
+    transition: 0.2s;
+
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+}
+
+.aboutProject h2,
+.helpProject h2 {
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.aboutProject h2::before {
+  content: "";
+  height: 0.5rem;
+  width: 6rem;
+  position: absolute;
+  bottom: -0.5rem;
+  background-color: #2d05bf;
+}
+
+.aboutProject article {
+  max-width: 60%;
+}
+
+.aboutProject article p {
+  margin-bottom: 3.2rem;
+  line-height: 1.6;
+  font-size: 2rem;
+}
+
+.aboutProject span {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+
+.aboutProject cite {
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 4rem;
+}
+
+.aboutProject img {
+  margin: 4rem 0;
+}
+
+.aboutProjectCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  min-height: 28rem;
+  width: 80%;
+}
+
+.aboutProjectCard:first-child {
+  background: #22559a;
+}
+
+.aboutProjectCard {
+  background: #2f7fc7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+  position: relative;
+}
+
+.aboutProjectCard .aboutProjectCardIcon {
+  font-size: 25px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007bf8;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+}
+
+.aboutProjectCard h4 {
+  font-size: 3.2rem;
+}
+
+.aboutProjectCard:hover .aboutProjectCardHiden {
+  opacity: 1;
+}
+
+.aboutProjectCard .aboutProjectCardHiden {
+  position: absolute;
+  z-index: 2;
+  background: #2e3b3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #f1f2f3;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.aboutProjectCard .aboutProjectCardHiden p {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.aboutProjectCard .aboutProjectCardHiden h4 {
+  font-size: 4.2rem;
+}
+
+.aboutProjectCard .aboutProjectCardHiden a {
+  color: #fff;
+  background-color: #1d2124;
+  border-color: #171a1d;
+  border-radius: 5px;
+  padding: 0.8rem 1.6rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding: 4rem 0;
+  background: rgb(241, 241, 241);
+}
+
+.video::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../../../public/swirl_pattern.png") fixed;
+  background-size: 35rem;
+  background-position: center;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.video h2 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 7rem;
+  font-size: 4.6rem;
+  color: #252525;
+}
+
+.video iframe {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.video h2::before {
+  content: "";
+  height: 0.7rem;
+  width: 6rem;
+  position: absolute;
+  bottom: -0.5rem;
+  background-color: #2d05bf;
+}
+
+.reality {
+  background: #daf3fb;
+  text-align: center;
+  padding: 4rem;
+  flex-direction: column;
+}
+
+.reality img {
+  max-width: 90%;
+  max-height: 28rem;
+  margin: 0 auto;
+}
+
+.projectAbout {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 3rem;
+  padding: 4rem 10rem;
+}
+
+.projectAbout h4 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.projectAboutVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.projectAboutVideo img {
+  max-width: 50rem;
+}
+
+.projectAboutForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 9rem 0;
+  background: #daf3fb;
+}
+
+.projects h2 {
+  margin-bottom: 4rem;
+}
+
+.projects p {
+  font-size: 1.6rem;
+  margin-bottom: 8rem;
+  font-weight: 700;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .video h2 {
+    text-align: center;
+    display: inline-block;
+    font-size: 4rem;
+  }
+  .video {
+    width: 100%;
+  }
+  .video iframe {
+    width: 90%;
+  }
+  .aboutProject article {
+    max-width: 90%;
+  }
+  .aboutProject article p {
+    font-size: 1.8rem;
+  }
+  .projectAbout {
+    grid-template-columns: none;
+    padding: 4rem 2rem;
+  }
+  .projectAboutVideo iframe {
+    width: 100%;
+  }
+  .projects {
+    padding: 4rem;
+    text-align: center;
+  }
+  .projects h2 {
+    font-size: 4rem;
+  }
+  .realityGrid {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+  .reality {
+    padding: 1.6rem;
+  }
+  .reality h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .title {
+    margin-bottom: 4rem;
+  }
+  .aboutProject span {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  .aboutProjectCards {
+    grid-template-columns: none;
+  }
+  .aboutProjectCard {
+    height: 28rem;
+    text-align: center;
+  }
+}

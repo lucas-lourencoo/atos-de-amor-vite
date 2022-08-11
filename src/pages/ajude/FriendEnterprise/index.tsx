@@ -1,4 +1,4 @@
-import BannerImage from "../../components/BannerImage";
+import BannerImage from "../../../components/BannerImage";
 import Slider from "react-slick";
 import { FiHome } from "react-icons/fi";
 import { Link } from "react-router-dom";
