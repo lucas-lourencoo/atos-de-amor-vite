@@ -31,7 +31,7 @@ export function About() {
       <section className={styles.aboutText}>
         <article>
           <p>
-            <strong>O INSTITUTO ATOS DE AMOR</strong>, também identificado com a
+            <strong>O INSTITUTO ATOS DE AMOR</strong>, também identificado com a
             sigla IAA, é uma organização da sociedade civil, sediada em Campo
             Grande/MS, podendo exercer atividades e representação em todo o
             território nacional e internacional. Portanto, uma organização sem
