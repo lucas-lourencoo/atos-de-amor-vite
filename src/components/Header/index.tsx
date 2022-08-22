@@ -33,8 +33,8 @@ export default function Header() {
       <nav>
         <ul className={styles.navigator}>
           <li className={styles.navigatorItem}>
-            <Link to="/">
-              <span className={styles.navigatorLink}>Home</span>
+            <Link to="/" className={styles.navigatorLink}>
+              Home
             </Link>
           </li>
           <li className={styles.navigatorItem}>
@@ -115,14 +115,14 @@ export default function Header() {
             </a>
           </li>
           <li className={styles.navigatorItem}>
-            <Link to="/contato">
-              <span className={styles.navigatorLink}>Contato</span>
+            <Link to="/contato" className={styles.navigatorLink}>
+              Contato
             </Link>
           </li>
           <li className={styles.navigatorItem}>
-            <a className={styles.navigatorLink} href="/blog">
+            <Link className={styles.navigatorLink} to="/blog">
               Blog
-            </a>
+            </Link>
           </li>
           <li className={styles.navigatorItem}>
             <a
@@ -150,8 +150,8 @@ export default function Header() {
             <FaTimes size={32} color="#fff" />
           </button>
           <li className={styles.navigatorItem} onClick={showMenu}>
-            <Link to="/">
-              <span className={styles.navigatorLink}>Home</span>
+            <Link to="/" className={styles.navigatorLink}>
+              Home
             </Link>
           </li>
           <li className={styles.navigatorItem}>
@@ -230,13 +230,13 @@ export default function Header() {
             </a>
           </li>
           <li className={styles.navigatorItem}>
-            <Link to="/blog">
-              <a className={styles.navigatorLink}>Blog</a>
+            <Link to="/blog" className={styles.navigatorLink}>
+              Blog
             </Link>
           </li>
           <li className={styles.navigatorItem}>
-            <Link to="/contato">
-              <span className={styles.navigatorLink}>Contato</span>
+            <Link to="/contato" className={styles.navigatorLink}>
+              Contato
             </Link>
           </li>
           <li className={styles.navigatorItem}>
