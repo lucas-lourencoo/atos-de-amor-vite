@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ProjectsSlider from "../../components/ProjectsSlider";
+import { Post } from "../../contexts/PostsContext";
+import { api } from "../../services/axios";
 import { ContactSection } from "../Contact/components/ContactSection";
 import Banner from "./components/Banner";
 import { DepositoBanner } from "./components/DepositoBanner";
@@ -8,33 +10,19 @@ import PhrasesSlider from "./components/PhrasesSlider";
 import ProjectsEspecifys from "./components/ProjectsEspecifys";
 import styles from "./styles.module.scss";
 
-type Post = {
-  id: number;
-  attributes: {
-    title: string;
-    updatedAt: string;
-    content: string;
-    images: {
-      data: [
-        {
-          attributes: {
-            url: string;
-          };
-        }
-      ];
-    };
-  };
-};
-
 export function Home() {
-  const [posts, setPosts] = useState([] as Post[]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     async function getPosts() {
-      const response = await fetch(
-        "https://iaa-strapi.herokuapp.com/api/posts?populate[0]=images&pagination[pageSize]=3"
-      );
-      const { data } = await response.json();
+      const { data } = await api
+        .get("/posts", {
+          params: {
+            "populate[0]": "images",
+            "pagination[pageSize]": 3,
+          },
+        })
+        .then((res) => res.data);
 
       const posts = data.map((post: Post) => {
         return {
@@ -60,6 +48,7 @@ export function Home() {
 
     getPosts();
   });
+
   return (
     <main>
       <Banner />

@@ -1,69 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { api } from "../../services/axios";
 import BannerImage from "../../components/BannerImage";
 import { FaCaretRight, FaRegClock } from "react-icons/fa";
 import styles from "./styles.module.scss";
-
-interface PostsInterface {
-  id: number;
-  attributes: {
-    title: string;
-    updatedAt: string;
-    content: string;
-    images: {
-      data: [
-        {
-          attributes: {
-            url: string;
-          };
-        }
-      ];
-    };
-  };
-}
+import { Post, PostsContext } from "../../contexts/PostsContext";
 
 export function Blog() {
-  const [newPosts, setPosts] = useState([] as PostsInterface[]);
-  const [postsFiltered, setPostsFiltered] = useState([] as PostsInterface[]);
-
-  useEffect(() => {
-    async function getPosts() {
-      const { data } = await api
-        .get("/posts?populate[0]=images&sort[1]=publishedAt%3Adesc")
-        .then((res) => res.data);
-
-      const posts = data.map((post: PostsInterface) => {
-        return {
-          id: post.id,
-          attributes: {
-            title: post.attributes.title,
-            content: post.attributes.content,
-            images: post.attributes.images,
-            updatedAt: new Date(post.attributes.updatedAt).toLocaleDateString(
-              "pt-BR",
-              {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              }
-            ),
-          },
-        };
-      });
-
-      setPosts(posts);
-    }
-
-    getPosts();
-  }, []);
+  const { posts } = useContext(PostsContext);
+  const [postsFiltered, setPostsFiltered] = useState<Post[]>([]);
 
   const filter = (event: any) => {
-    const posts = newPosts.filter((post) =>
+    const postsFiltered = posts.filter((post) =>
       post.attributes.content.includes(event.target.textContent)
     );
 
-    setPostsFiltered(posts);
+    setPostsFiltered(postsFiltered);
 
     document.getElementsByName("button").forEach((item) => {
       item.classList.remove(styles.active);
@@ -114,7 +65,7 @@ export function Blog() {
 
         <div className={styles.cardsGrid} id="postsContainer">
           {postsFiltered.length > 0
-            ? postsFiltered.map((post: PostsInterface) => {
+            ? postsFiltered.map((post) => {
                 return (
                   <div className={styles.card} key={post.id}>
                     <img
@@ -138,7 +89,7 @@ export function Blog() {
                   </div>
                 );
               })
-            : newPosts.map((post: PostsInterface) => {
+            : posts.map((post) => {
                 return (
                   <div className={styles.card} key={post.id}>
                     <img
