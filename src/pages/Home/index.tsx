@@ -27,19 +27,14 @@ export function Home() {
       const posts = data.map((post: Post) => {
         return {
           id: post.id,
-          attributes: {
-            title: post.attributes.title,
-            content: post.attributes.content.slice(0, 120) + "...",
-            images: post.attributes.images,
-            updatedAt: new Date(post.attributes.updatedAt).toLocaleDateString(
-              "pt-BR",
-              {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              }
-            ),
-          },
+          title: post.title,
+          content: post.content.slice(0, 120) + "...",
+          images: post.images,
+          updatedAt: new Date(post.updatedAt).toLocaleDateString("pt-BR", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          }),
         };
       });
 
@@ -126,13 +121,10 @@ export function Home() {
             return (
               <div className={styles.card} key={post.id}>
                 <figure>
-                  <img
-                    src={post.attributes.images.data[0].attributes.url}
-                    alt=""
-                  />
+                  <img src={JSON.parse(post.images)} alt="" />
                 </figure>
                 <div className={styles.text}>
-                  <h4>{post.attributes.title}</h4>
+                  <h4>{post.title}</h4>
                   <Link to={`/blog/${post.id}`}>Leia mais</Link>
                 </div>
               </div>
