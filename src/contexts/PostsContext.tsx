@@ -3,20 +3,11 @@ import { api } from "../services/axios";
 
 export type Post = {
   id: number;
-  attributes: {
-    title: string;
-    updatedAt: string;
-    content: string;
-    images: {
-      data: [
-        {
-          attributes: {
-            url: string;
-          };
-        }
-      ];
-    };
-  };
+  title: string;
+  updatedAt: string;
+  content: string;
+  images: string;
+  createdAt: string;
 };
 
 interface PostsContextInterface {
@@ -33,29 +24,20 @@ export function PostsContextProvider({ children }: PostsProviderInterface) {
   const [posts, setPosts] = useState<Post[]>([]);
 
   async function getPosts() {
-    const { data } = await api
-      .get("/posts", {
-        params: {
-          "populate[0]": "images",
-        },
-      })
-      .then((res) => res.data);
+    const { data } = await api.get("/iaa").then((res) => res.data);
 
     const posts = data.map((post: Post) => {
       return {
         id: post.id,
         attributes: {
-          title: post.attributes.title,
-          content: post.attributes.content.slice(0, 120) + "...",
-          images: post.attributes.images,
-          updatedAt: new Date(post.attributes.updatedAt).toLocaleDateString(
-            "pt-BR",
-            {
-              day: "2-digit",
-              month: "long",
-              year: "numeric",
-            }
-          ),
+          title: post.title,
+          content: post.content.slice(0, 120) + "...",
+          images: post.images,
+          updatedAt: new Date(post.createdAt).toLocaleDateString("pt-BR", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          }),
         },
       };
     });

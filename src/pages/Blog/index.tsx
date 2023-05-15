@@ -11,7 +11,7 @@ export function Blog() {
 
   const filter = (event: any) => {
     const postsFiltered = posts.filter((post) =>
-      post.attributes.content.includes(event.target.textContent)
+      post.content.includes(event.target.textContent)
     );
 
     setPostsFiltered(postsFiltered);
@@ -68,19 +68,16 @@ export function Blog() {
             ? postsFiltered.map((post) => {
                 return (
                   <div className={styles.card} key={post.id}>
-                    <img
-                      src={post.attributes.images.data[0].attributes.url}
-                      alt=""
-                    />
+                    <img src={JSON.parse(post.images)[0]} alt="" />
 
                     <div className={styles.text}>
                       <div className={styles.time}>
                         <FaRegClock />
-                        {post.attributes.updatedAt}
+                        {post.updatedAt}
                       </div>
-                      <h3>{post.attributes.title}</h3>
+                      <h3>{post.title}</h3>
                       <p className={styles.content}>
-                        {post.attributes.content.slice(0, 120) + "..."}
+                        {post.content.slice(0, 120) + "..."}
                       </p>
                       <Link to={`/blog/${post.id}`} className={styles.button}>
                         Leia mais
@@ -92,19 +89,16 @@ export function Blog() {
             : posts.map((post) => {
                 return (
                   <div className={styles.card} key={post.id}>
-                    <img
-                      src={post.attributes.images.data[0].attributes.url}
-                      alt=""
-                    />
+                    <img src={JSON.parse(post.images)[0]} alt="" />
 
                     <div className={styles.text}>
                       <div className={styles.time}>
                         <FaRegClock />
-                        {post.attributes.updatedAt}
+                        {post.updatedAt}
                       </div>
-                      <h3>{post.attributes.title}</h3>
+                      <h3>{post.title}</h3>
                       <p className={styles.content}>
-                        {post.attributes.content.slice(0, 120) + "..."}
+                        {post.content.slice(0, 120) + "..."}
                       </p>
                       <Link to={`/blog/${post.id}`} className={styles.button}>
                         Leia mais

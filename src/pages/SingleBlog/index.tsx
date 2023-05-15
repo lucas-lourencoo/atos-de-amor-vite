@@ -17,12 +17,12 @@ export function SingleBlog() {
     setPost(post);
   }, []);
 
-  const images = post?.attributes?.images?.data.map((image: any) => {
+  const images = JSON.parse(post?.images).map((image: any) => {
     return {
-      original: image.attributes.url,
-      thumbnail: image.attributes.formats.thumbnail.url,
-      originalAlt: image.attributes.name,
-      thumbnailAlt: image.attributes.name,
+      original: image.url,
+      thumbnail: image.formats.thumbnail.url,
+      originalAlt: image.name,
+      thumbnailAlt: image.name,
     };
   });
 
@@ -32,13 +32,13 @@ export function SingleBlog() {
 
       <section className={styles.containerzin}>
         <article>
-          <h1>{post?.attributes?.title}</h1>
+          <h1>{post?.title}</h1>
           <div className={styles.time}>
             <FaRegClock />
-            {post?.attributes?.updatedAt}
+            {post?.updatedAt}
           </div>
 
-          {post?.attributes?.images && (
+          {post?.images && (
             <ImageGallery
               items={images}
               autoPlay={true}
@@ -49,9 +49,7 @@ export function SingleBlog() {
             />
           )}
 
-          <div
-            dangerouslySetInnerHTML={{ __html: post?.attributes?.content }}
-          ></div>
+          <div dangerouslySetInnerHTML={{ __html: post?.content }}></div>
         </article>
       </section>
     </main>

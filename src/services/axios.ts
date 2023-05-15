@@ -1,5 +1,5 @@
-import axios from 'axios'
+import axios from "axios";
 
 export const api = axios.create({
-  baseURL: 'https://iaa-strapi.herokuapp.com/api'
-})
+  baseURL: "https://blog-dash.vercel.app/api",
+});
