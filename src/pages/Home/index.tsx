@@ -15,14 +15,7 @@ export function Home() {
 
   useEffect(() => {
     async function getPosts() {
-      const { data } = await api
-        .get("/posts", {
-          params: {
-            "populate[0]": "images",
-            "pagination[pageSize]": 3,
-          },
-        })
-        .then((res) => res.data);
+      const { data } = await api.get("/iaa").then((res) => res.data);
 
       const posts = data.map((post: Post) => {
         return {
