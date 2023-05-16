@@ -5,26 +5,24 @@ import { FaRegClock } from "react-icons/fa";
 import BannerImage from "../../components/BannerImage";
 import styles from "./styles.module.scss";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { Post, PostsContext } from "../../contexts/PostsContext";
+import { PostsContext } from "../../contexts/PostsContext";
 
 export function SingleBlog() {
   const { posts } = useContext(PostsContext);
-  const [post, setPost] = useState({} as Post);
   const { id: postId } = useParams();
 
-  useEffect(() => {
-    const post = posts.find((post) => post.id.toString() === postId)!;
-    setPost(post);
-  }, []);
+  const postFind = posts.find((post) => post.id.toString() === postId)!;
 
-  const images = JSON.parse(post?.images).map((image: any) => {
-    return {
-      original: image.url,
-      thumbnail: image.formats.thumbnail.url,
-      originalAlt: image.name,
-      thumbnailAlt: image.name,
-    };
-  });
+  const images =
+    !!postFind?.images &&
+    JSON.parse(postFind?.images).map((image: any) => {
+      return {
+        original: image,
+        thumbnail: image,
+        originalAlt: image,
+        thumbnailAlt: image,
+      };
+    });
 
   return (
     <main>
@@ -32,13 +30,13 @@ export function SingleBlog() {
 
       <section className={styles.containerzin}>
         <article>
-          <h1>{post?.title}</h1>
+          <h1>{postFind?.title}</h1>
           <div className={styles.time}>
             <FaRegClock />
-            {post?.updatedAt}
+            {postFind?.updatedAt}
           </div>
 
-          {post?.images && (
+          {postFind?.images && (
             <ImageGallery
               items={images}
               autoPlay={true}
@@ -49,7 +47,7 @@ export function SingleBlog() {
             />
           )}
 
-          <div dangerouslySetInnerHTML={{ __html: post?.content }}></div>
+          <p>{postFind?.content}</p>
         </article>
       </section>
     </main>

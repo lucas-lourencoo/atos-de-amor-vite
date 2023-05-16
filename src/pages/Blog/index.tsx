@@ -8,6 +8,7 @@ import { Post, PostsContext } from "../../contexts/PostsContext";
 export function Blog() {
   const { posts } = useContext(PostsContext);
   const [postsFiltered, setPostsFiltered] = useState<Post[]>([]);
+  console.log("🚀 ~ file: index.tsx:15 ~ filter ~ posts:", posts);
 
   const filter = (event: any) => {
     const postsFiltered = posts.filter((post) =>
@@ -86,7 +87,7 @@ export function Blog() {
                   </div>
                 );
               })
-            : posts.map((post) => {
+            : posts?.map((post) => {
                 return (
                   <div className={styles.card} key={post.id}>
                     <img src={JSON.parse(post.images)[0]} alt="" />
