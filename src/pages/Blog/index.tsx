@@ -8,7 +8,6 @@ import { Post, PostsContext } from "../../contexts/PostsContext";
 export function Blog() {
   const { posts } = useContext(PostsContext);
   const [postsFiltered, setPostsFiltered] = useState<Post[]>([]);
-  console.log("🚀 ~ file: index.tsx:15 ~ filter ~ posts:", posts);
 
   const filter = (event: any) => {
     const postsFiltered = posts.filter((post) =>

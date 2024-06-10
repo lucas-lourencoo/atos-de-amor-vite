@@ -24,7 +24,7 @@ export function PostsContextProvider({ children }: PostsProviderInterface) {
   const [posts, setPosts] = useState<Post[]>([]);
 
   async function getPosts() {
-    const data = await api.get("/iaa").then((res) => res.data);
+    const { data } = await api.get("/posts");
 
     const posts = data?.map((post: Post) => {
       return {

@@ -122,51 +122,144 @@ export function Transparency() {
         </div>
       </section>
 
-      <section className={styles.transparenciaRelatorio}>
-        <h2 className={styles.title}>Relatórios do ano corrente</h2>
-        <div className={styles.transparenciaTimeline}>
-          <div className={styles.transparenciaTimelineItem}>
-            <p>Janeiro de 2019</p>
-            <p>
-              Projeto Socorre Vidas realizou ao todo 20 atendimentos, desses 20
-              atendimentos 19 pessoas/famílias receberam 01 cesta básica, 04
-              famílias atendidas com vestuários em geral, fraldas, mochilas e
-              utensílios domésticos.
-            </p>
-            <p>
-              Mateus 25:35 Ruas e Bairros forneceu 200 refeições 160L de suco 92
-              Banhos.
-            </p>
-            <p>Missão Paraguai forneceu 50L de suco e 300 refeições</p>
-          </div>
-
-          <div className={styles.trasparenciaTimelineItemContainerRight}>
-            <div className={styles.transparenciaTimelineItemRight}>
-              <p>Fevereiro de 2018</p>
-              <p>
-                Confira os relatórios de prestação de contas do mês de Fevereiro
-                de 2019.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.transparenciaTimelineItem}>
-            <p>Março de 2019</p>
-            <p>
-              Confira os relatórios de prestação de contas do mês de Março de
-              2019.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className={styles.transparenciaPastYears}>
         <h2 className={styles.title}>Documentos importantes</h2>
         <button onClick={() => activeDropdown("0")}>
-          2022
+          2023
           <FaCaretDown />
         </button>
         <div id="0" className={styles.docsContainer}>
+          <a
+            href="/docs/compartilhar_e_amar/OFICIO N. 7 - 2023.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Ofício n. 7/2023
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/OFICIO N. 17-2023.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Ofício n. 17/2023
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/REGISTROS DA PREPARACAO DOS ALIMENTOS.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Registros da preparação de alimentos - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/EXTRATO DE INVESTIMENTOS - CONTA 47626-9.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Extrato de investimentos - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/NOTAS FISCAIS E COMPROVANTES.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Notas fiscais e comprovantes de pagamentos I - Projeto Compartilhar
+            e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/NOTAS FISCAIS E COMPROVANTES PGTO-2.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Notas fiscais e comprovantes de pagamentos II - Projeto Compartilhar
+            e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/EXTRATOS BANCARIOS.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Extratos bancários I - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/TERMO FOMENTO N. 32012-22 - CARDAPIO.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Cardápio - Projeto Compartilhar e amar
+          </a>
+        </div>
+        <button onClick={() => activeDropdown("1")}>
+          2022
+          <FaCaretDown />
+        </button>
+        <div id="1" className={styles.docsContainer}>
+          <a
+            href="/docs/compartilhar_e_amar/TERMO COLABORACAO ANEXO VIII.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Termo de colaboração | Anexo VIII - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/TERMO DE CONHECIMENTO - FOMENTO 32012-2022.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Termo de conhecimento - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/PRESTACAO DE CONTAS - FOMENTO 32012-2022.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Prestação de contas - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/MEMORIA DE REUNIAO.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Memória de reunião - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/I TERMO ADITIVO AO TERMO DE FOMENTO N. 32012-2022.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />I Termo aditivo - Projeto Compartilhar e
+            amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/EXTRATO DO I TERMO ADITIVO FOMENTO N. 32141-2022.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Extrato do I termo aditivo - Projeto Compartilhar e amar
+          </a>
+          <a href="/docs/compartilhar_e_amar/ORCAMENTOS.pdf" target="__blank">
+            <FaRegFilePdf size={20} />
+            Orçamentos - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/PESQUISA SATISFACAO DE ATENDIMENTO - FOMENTO 32012-2022.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Pesquisa de satisfação - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/TERMO DE FOMENTO.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Termo de fomento - Projeto Compartilhar e amar
+          </a>
+          <a
+            href="/docs/compartilhar_e_amar/PLANO DE TRABALHO - Compartilhar e amar.pdf"
+            target="__blank"
+          >
+            <FaRegFilePdf size={20} />
+            Plano de trabalho - Projeto Compartilhar e amar
+          </a>
           <a href="/docs/casa_meninos/Carta correção.pdf" target="__blank">
             <FaRegFilePdf size={20} />
             Carta correção - Projeto Casa de Meninos
@@ -278,11 +371,11 @@ export function Transparency() {
             Utilização veicular | Fevereiro 2021 - Projeto Casa de Meninos
           </a>
         </div>
-        <button onClick={() => activeDropdown("1")}>
+        <button onClick={() => activeDropdown("2")}>
           2021
           <FaCaretDown />
         </button>
-        <div id="1" className={styles.docsContainer}>
+        <div id="2" className={styles.docsContainer}>
           <a
             href="/docs/PLANO DE TRABALHO - Construindo Futuro.pdf"
             target="__blank"
@@ -309,11 +402,11 @@ export function Transparency() {
             Plano de trabalho- Projeto Casa do Pão
           </a>
         </div>
-        <button onClick={() => activeDropdown("2")}>
+        <button onClick={() => activeDropdown("3")}>
           2019
           <FaCaretDown />
         </button>
-        <div id="2" className={styles.docsContainer}>
+        <div id="3" className={styles.docsContainer}>
           <a href="/docs/Balanço e DRE 2019.pdf" target="__blank">
             <FaRegFilePdf size={20} />
             Balanço e DRE 2019
@@ -340,10 +433,10 @@ export function Transparency() {
           </a>
         </div>
 
-        <button onClick={() => activeDropdown("3")}>
+        <button onClick={() => activeDropdown("4")}>
           2018 <FaCaretDown />
         </button>
-        <div id="3" className={styles.docsContainer}>
+        <div id="4" className={styles.docsContainer}>
           <a href="/docs/DRE 2018 - Analitico.pdf" target="__blank">
             <FaRegFilePdf size={20} />
             DRE 2018 - Analitico
@@ -354,10 +447,10 @@ export function Transparency() {
           </a>
         </div>
 
-        <button onClick={() => activeDropdown("4")}>
+        <button onClick={() => activeDropdown("5")}>
           2016 <FaCaretDown />
         </button>
-        <div id="4" className={styles.docsContainer}>
+        <div id="5" className={styles.docsContainer}>
           <a href="/docs/Ata de posse.pdf" target="__blank">
             <FaRegFilePdf size={20} />
             Ata de posse
@@ -368,10 +461,10 @@ export function Transparency() {
           </a>
         </div>
 
-        <button onClick={() => activeDropdown("5")}>
+        <button onClick={() => activeDropdown("6")}>
           Certificações <FaCaretDown />
         </button>
-        <div id="5" className={styles.docsContainer}>
+        <div id="6" className={styles.docsContainer}>
           <a href="/docs/CEBAS.pdf" target="__blank">
             <FaRegFilePdf size={20} />
             CEBAS
@@ -396,6 +489,44 @@ export function Transparency() {
             <FaRegFilePdf size={20} />
             Utilidade pública municipal
           </a>
+        </div>
+      </section>
+
+      <section className={styles.transparenciaRelatorio}>
+        <h2 className={styles.title}>Relatórios do ano corrente</h2>
+        <div className={styles.transparenciaTimeline}>
+          <div className={styles.transparenciaTimelineItem}>
+            <p>Janeiro de 2019</p>
+            <p>
+              Projeto Socorre Vidas realizou ao todo 20 atendimentos, desses 20
+              atendimentos 19 pessoas/famílias receberam 01 cesta básica, 04
+              famílias atendidas com vestuários em geral, fraldas, mochilas e
+              utensílios domésticos.
+            </p>
+            <p>
+              Mateus 25:35 Ruas e Bairros forneceu 200 refeições 160L de suco 92
+              Banhos.
+            </p>
+            <p>Missão Paraguai forneceu 50L de suco e 300 refeições</p>
+          </div>
+
+          <div className={styles.trasparenciaTimelineItemContainerRight}>
+            <div className={styles.transparenciaTimelineItemRight}>
+              <p>Fevereiro de 2018</p>
+              <p>
+                Confira os relatórios de prestação de contas do mês de Fevereiro
+                de 2019.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.transparenciaTimelineItem}>
+            <p>Março de 2019</p>
+            <p>
+              Confira os relatórios de prestação de contas do mês de Março de
+              2019.
+            </p>
+          </div>
         </div>
       </section>
     </main>

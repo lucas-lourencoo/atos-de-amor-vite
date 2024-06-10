@@ -67,8 +67,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/projetos/casa-do-pao">Casa do Pão</Link>
+              </li>
+              <li>
                 <Link to="/projetos/casa-de-meninos">
                   <a>Casa de meninos</a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/projetos/mateus-25-35-compartilhar">
+                  Compartilhar e Amar
                 </Link>
               </li>
               <li>

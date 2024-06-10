@@ -66,14 +66,14 @@
     justify-self: center;
     max-width: 25%;
 
-    img + img{
+    img + img {
       margin-bottom: 1.6rem;
     }
   }
 }
 
 .helpProject {
-  max-width: 1120px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0;
 
@@ -101,9 +101,9 @@
     font-weight: 600;
     font-size: 2.4rem;
     display: inline-block;
-    transition: .2s;
+    transition: 0.2s;
 
-    &:hover{
+    &:hover {
       filter: brightness(120%);
     }
   }
@@ -146,7 +146,6 @@
     font-style: normal;
   }
 }
-
 
 .transparenciaDesempenhoGrid {
   display: grid;
@@ -227,7 +226,7 @@
   margin: 4rem 0;
   background: rgb(241, 241, 241);
 
-  .text{
+  .text {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,7 +235,7 @@
     margin: 0 auto;
     padding: 4rem 0;
 
-    @media(max-width: 728px){
+    @media (max-width: 728px) {
       width: 90%;
     }
   }
@@ -262,10 +261,10 @@
   color: #252525;
   line-height: 1.1;
   text-align: center;
-  
-  @media(max-width: 728px){
-      font-size: 3.2rem !important;
-    }
+
+  @media (max-width: 728px) {
+    font-size: 3.2rem !important;
+  }
 }
 
 .video iframe {

@@ -21,6 +21,7 @@ import { MathewDistricts } from "./pages/projetos/MathewDistricts";
 import { MathewStreets } from "./pages/projetos/MathewStreets";
 import { HelpLifes } from "./pages/projetos/HelpLifes";
 import { SingleBlog } from "./pages/SingleBlog";
+import { ShareAndLove } from "./pages/projetos/ShareAndLove";
 
 export function Router() {
   return (
@@ -40,6 +41,7 @@ export function Router() {
           <Route path="artevida" element={<ArteVida />} />
           <Route path="casa-de-meninos" element={<BoysHouse />} />
           <Route path="casa-do-pao" element={<BreadHouse />} />
+          <Route path="mateus-25-35-compartilhar" element={<ShareAndLove />} />
           <Route path="construindo-o-futuro" element={<BuildingFuture />} />
           <Route path="hogarninas" element={<HogarNinas />} />
           <Route path="mateus-25-35-bairros" element={<MathewDistricts />} />

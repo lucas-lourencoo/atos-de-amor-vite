@@ -64,6 +64,11 @@ export default function Header() {
                   <Link to="/projetos/casa-do-pao">Casa do Pão</Link>
                 </li>
                 <li>
+                  <Link to="/projetos/mateus-25-35-compartilhar">
+                    Compartilhar e Amar
+                  </Link>
+                </li>
+                <li>
                   <Link to="/projetos/construindo-o-futuro">
                     Construindo o futuro
                   </Link>
@@ -73,12 +78,12 @@ export default function Header() {
                 </li>
                 <li>
                   <Link to="/projetos/mateus-25-35-ruas">
-                    Mateus 25:35 Ruas
+                    Mateus 25:35 - Ruas
                   </Link>
                 </li>
                 <li>
                   <Link to="/projetos/mateus-25-35-bairros">
-                    Mateus 25:35 Bairros
+                    Mateus 25:35 - Bairros
                   </Link>
                 </li>
                 <li>

@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://blog-dash.vercel.app/api",
+  baseURL: "http://localhost:1337/api",
 });
