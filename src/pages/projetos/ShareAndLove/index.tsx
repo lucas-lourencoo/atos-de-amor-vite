@@ -27,14 +27,14 @@ export function ShareAndLove() {
 
   return (
     <main>
-      <BannerImage image="/mateusruass2.png" title="Compartilhar e amar" />
+      <BannerImage image="/mateusruass2.png" title="Compartilhar e Amar" />
 
       <div className={styles.breadcrumb}>
         <p>
           <Link to="/">
             <FiHome />
           </Link>
-          /<span>Projetos</span>/<span>Compartilhar e amar</span>
+          /<span>Projetos</span>/<span>Compartilhar e Amar</span>
         </p>
       </div>
 
@@ -85,23 +85,28 @@ export function ShareAndLove() {
           <article>
             <p>
               Para realização deste Projeto o IAA recebeu o apoio financeiro da
-              Secretaria de Estado Direitos Humanos, Assistência Social e
-              Trabalho – <strong>SEDHAST</strong>. Tendo como finalidade
-              aquisições dos seguintes insumos (Gêneros alimentícios, material
-              descartável, material de limpeza, utensílios domésticos e gás de
-              cozinha).
+              Secretaria de Estado, Assistência Social e dos Direitos Humano –
+              <strong>SEAD</strong>. Tendo como finalidade aquisições dos
+              seguintes insumos (Gêneros alimentícios, material descartável,
+              material de limpeza, utensílios domésticos e gás de cozinha).
             </p>
             <p>
               Parceria estabelecida pelo termo de fomento <i>n. 32012/2022</i>,
-              Promover o combate a fome através da distribuição de refeições as
-              pessoas em situação de rua atendidas pelo Projeto Mateus 25 -
-              “Compartilhar e Amar”.
+              Data da assinatura: 07/07/2022, Instituto Atos de Amor, CNPJ:
+              15.454.003/0001-72.
+            </p>
+            <p>
+              Objetivo da parceria: Promover o combate a fome através da
+              distribuição de refeições as pessoas em situação de rua atendidas
+              pelo Projeto Mateus 25 - “Compartilhar e Amar”. Meta estabelecida:
+              2.400 pessoas atendidas. Resultados obtidos: 4.100 pessoas
+              atendidas. Valor da Parceria: R$ 65.000.00. Parcela: Única.
+              Prestação de Contas: Em anexo
             </p>
           </article>
 
           <div className={styles.logos}>
-            <img src="/sedhast.png" alt="Logo da SEDHAST" />
-            <img src="/governo.png" alt="Logo do governo do MS" />
+            <img src="/sead.png" alt="Logo da SEAD" />
           </div>
         </div>
         <Link to="/institucional/transparencia">
