@@ -40,13 +40,25 @@ export default function Banner() {
     <div className={styles.banner}>
       <div className={styles.banner}>
         {isMobile ? (
-          <video src="/videos/mobilesite.mp4" autoPlay loop muted></video>
+          <video
+            src="/videos/mobilesite.mp4"
+            autoPlay
+            loop
+            muted
+            preload="auto"
+          ></video>
         ) : (
-          <video src="/videos/IAA_.mp4" autoPlay loop muted></video>
+          <video
+            src="/videos/IAA_.mp4"
+            autoPlay
+            loop
+            muted
+            preload="auto"
+          ></video>
         )}
       </div>
       <section className={styles.centerText}>
-        <img loading="lazy" src="/coracao1.png" alt="" draggable={false} />
+        <img src="/coracao1.png" alt="" draggable={false} />
         <div className={styles.text}>
           <Slider {...settings}>
             <div>
